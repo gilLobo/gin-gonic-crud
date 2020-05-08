@@ -13,11 +13,10 @@ import (
 
 func main() {
 	var err error
-	fmt.Println(config.DbURL(config.BuildDBConfig()))
 	config.DB, err = gorm.Open("postgres", config.DbURL(config.BuildDBConfig()))
 
 	if err != nil {
-		fmt.Println("statuse: ", err)
+		fmt.Println("Falha ao conectar no bd: ", err)
 	}
 
 	defer config.DB.Close()

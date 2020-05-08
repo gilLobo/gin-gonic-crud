@@ -1,7 +1,6 @@
 package controller
 
 import (
-	"fmt"
 	"gin-gonic-crud/models/dao"
 	"gin-gonic-crud/models/model"
 	"net/http"
@@ -11,10 +10,7 @@ import (
 
 // Create ...
 func Create(c *gin.Context) {
-	fmt.Println(c)
-	fmt.Println("----")
 	var user model.User
-	fmt.Println(&user)
 	c.BindJSON(&user)
 	err := dao.CreateUser(&user)
 	if err != nil {
