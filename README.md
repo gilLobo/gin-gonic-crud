@@ -1,4 +1,4 @@
-## API REST em Go
+# API REST em Go
 
 1. Gin Framework
 2. Gorm
@@ -17,5 +17,5 @@ require (
 	github.com/joho/godotenv v1.3.0
 )
 
-# RUN 
+# Run 
 go run main.go
